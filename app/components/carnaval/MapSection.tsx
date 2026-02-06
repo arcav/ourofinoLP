@@ -5,7 +5,7 @@ import { MapPin } from "lucide-react";
 
 export default function MapSection() {
     return (
-        <section className="pt-16 pb-16 px-4 bg-[#f0f2f5]" id="mapa">
+        <section className="pt-12 pb-12 px-4 bg-[#f0f2f5]" id="mapa">
             <div className="container mx-auto max-w-5xl">
                 {/* Localização: Disruptive Minimalist Map */}
                 <div className="relative">

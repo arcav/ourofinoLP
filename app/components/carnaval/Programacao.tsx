@@ -62,7 +62,7 @@ export default function Programacao() {
     ];
 
     return (
-        <section className="py-12 px-4 bg-gray-50 relative" id="programacao">
+        <section className="py-8 px-4 bg-gray-50 relative" id="programacao">
             <div className="container mx-auto max-w-4xl">
                 <div className="text-center mb-10">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#004DB6] uppercase tracking-tight leading-none px-2">
@@ -88,19 +88,28 @@ export default function Programacao() {
 function Card({ day, index, total }: any) {
     return (
         <div
-            className="sticky z-10"
+            className="sticky group/card"
             style={{
                 top: `calc(100px + ${index * 15}px)`,
-                marginBottom: `${(total - index) * 0}px`
+                marginBottom: `${(total - index) * 0}px`,
+                zIndex: 10 + index
             }}
         >
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="relative w-full drop-shadow-2xl"
+                className="relative w-full drop-shadow-2xl md:drop-shadow-2xl transition-all duration-300"
+                style={{
+                    transformOrigin: 'top center'
+                }}
             >
-                <div className="flex flex-col md:flex-row min-h-auto md:min-h-[220px] rounded-4xl md:rounded-3xl overflow-hidden bg-[#004DB6] text-white relative">
+                <div
+                    className="flex flex-col md:flex-row min-h-[320px] md:min-h-[280px] rounded-4xl md:rounded-3xl overflow-hidden bg-[#004DB6] text-white relative transition-all duration-300 md:scale-100"
+                    style={{
+                        transform: `scale(${1 - ((total - index - 1) * 0.02)})`,
+                    }}
+                >
 
                     {/* TICKET NOTCHES (Only desktop to save space on mobile) */}
                     <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-gray-50 rounded-full z-20"></div>
