@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
+import { SITE_URL } from "./config";
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -12,7 +14,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Carnaval Ouro Fino 2026",
   description: "Garanta seu ingresso para o melhor carnaval de todos os tempos. Shows, blocos e muita diversão na Estância Ouro Fino.",
-  metadataBase: new URL("https://ourofino.com.br"), // Replace with actual domain when live
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     title: "Carnaval Verão Ouro Fino 2026",
     description: "Venha viver a magia do carnaval na Estância Ouro Fino. Programação completa e ingressos disponíveis.",

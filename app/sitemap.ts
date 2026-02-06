@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next'
+import { SITE_URL } from './config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://ourofino.com.br',
+            url: SITE_URL,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,
