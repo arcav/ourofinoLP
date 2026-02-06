@@ -124,10 +124,20 @@ export default function Footer() {
                         {/* Social + Actions */}
                         <div className="flex flex-col items-center md:items-end gap-6">
                             <div className="flex gap-4">
-                                <a href="#" className="w-12 h-12 bg-white text-[#004DB6] hover:bg-[#004DB6] hover:text-white rounded-2xl flex items-center justify-center transition-all shadow-md hover:shadow-xl border border-blue-100 group">
+                                <a
+                                    href="https://www.facebook.com/aguasourofino/?locale=pt_BR"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-12 h-12 bg-white text-[#004DB6] hover:bg-[#004DB6] hover:text-white rounded-2xl flex items-center justify-center transition-all shadow-md hover:shadow-xl border border-blue-100 group"
+                                >
                                     <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform" />
                                 </a>
-                                <a href="#" className="w-12 h-12 bg-white text-[#C13584] hover:bg-[#C13584] hover:text-white rounded-2xl flex items-center justify-center transition-all shadow-md hover:shadow-xl border border-blue-100 group">
+                                <a
+                                    href="https://www.instagram.com/aguasourofino/?hl=pt"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-12 h-12 bg-white text-[#C13584] hover:bg-[#C13584] hover:text-white rounded-2xl flex items-center justify-center transition-all shadow-md hover:shadow-xl border border-blue-100 group"
+                                >
                                     <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform" />
                                 </a>
                             </div>
