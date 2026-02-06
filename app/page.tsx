@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: "Venha viver a magia do Carnaval 2026 na Estância Hidromineral Ouro Fino en Minas Gerais. Programação completa, shows, atrações infantis e muita natureza. Garanta seu ingresso!",
   keywords: ["Carnaval Ouro Fino 2026", "Ouro Folia", "Carnaval Minas Gerais", "Família", "Estância Hidromineral", "Ingressos Carnaval"],
   alternates: {
-    canonical: 'https://ourofino-lp-git-main-arcavs-projects.vercel.app/',
+    canonical: 'https://ourofino.com.br/',
   },
   openGraph: {
     title: "Carnaval Ouro Fino 2026 | Diversão para toda a família",

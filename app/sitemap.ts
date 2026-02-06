@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: 'https://ourofino-lp-git-main-arcavs-projects.vercel.app',
+            url: 'https://ourofino.com.br',
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,

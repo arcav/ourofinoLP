@@ -6,10 +6,10 @@ Esta é a Landing Page oficial do **Carnaval Ouro Fino 2026**, desenvolvida para
 
 O projeto foi construído com as tecnologias mais modernas do ecossistema web:
 
-- **Next.js 15 (App Router)** - Framework React para produção.
-- **React 19** - Biblioteca core para interface.
-- **Tailwind CSS v4** - Estilização moderna e eficiente.
-- **Framer Motion 12** - Animações fluidas e interações premium.
+- **Next.js** - Framework React para produção.
+- **React** - Biblioteca core para interface.
+- **Tailwind CSS** - Estilização moderna e eficiente.
+- **Framer Motion** - Animações fluidas e interações premium.
 - **Lucide React** - Conjunto de ícones consistentes.
 - **TypeScript** - Tipagem estática para maior segurança no código.
 

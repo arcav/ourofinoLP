@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://ourofino-lp-git-main-arcavs-projects.vercel.app/sitemap.xml',
+        sitemap: 'https://ourofino.com.br/sitemap.xml',
     }
 }
