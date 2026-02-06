@@ -17,8 +17,8 @@ import { SITE_URL } from "./config";
 
 export const metadata: Metadata = {
   title: "Carnaval Ouro Fino 2026 | O Maior Carnaval de Minas Gerais",
-  description: "Venha viver a magia do Carnaval 2026 na Estância Hidromineral Ouro Fino en Minas Gerais. Programação completa, shows, atrações infantis e muita natureza. Garanta seu ingresso!",
-  keywords: ["Carnaval Ouro Fino 2026", "Ouro Folia", "Carnaval Minas Gerais", "Família", "Estância Hidromineral", "Ingressos Carnaval"],
+  description: "Venha viver a magia do Carnaval 2026 na Estância Hidromineral Ouro Fino. Programação completa, shows, atrações infantis e muita natureza. Garanta seu ingresso!",
+  keywords: ["Carnaval Ouro Fino 2026", "Ouro Folia", "Carnaval Campo Largo", "Família", "Estância Hidromineral", "Ingressos Carnaval"],
   alternates: {
     canonical: SITE_URL,
   },
