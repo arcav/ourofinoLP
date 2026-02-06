@@ -11,10 +11,10 @@ export default function Ingressos() {
 
                 <div className="text-center mb-10">
                     <h2 className="text-5xl font-black text-[#004DB6] uppercase mb-4 tracking-tight">
-                        Garanta seu <span className="text-[#00AEEF]">Ingresso</span>
+                        Participe do maior  <span className="text-[#00AEEF]">Carnaval</span>
                     </h2>
                     <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                        Participe do maior carnaval da região com conforto e segurança. Escolha a opção ideal para você.
+                        Da região com conforto e segurança. Escolha a opção ideal para você.
                     </p>
                 </div>
 

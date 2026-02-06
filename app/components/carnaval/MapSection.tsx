@@ -97,7 +97,7 @@ export default function MapSection() {
                                     <div>
                                         <p className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wide">Endereço</p>
                                         <p className="text-sm md:text-base text-gray-700 font-medium leading-relaxed">
-                                            Estrada Ouro Fino, s/n<br />Bateias, Campo Largo - PR
+                                            Estrada Ouro Fino<br />Bateias, Campo Largo - PR <br /> CEP: 83648-000
                                         </p>
                                     </div>
 
@@ -117,7 +117,7 @@ export default function MapSection() {
                                     aria-label="Traçar rota no Google Maps e Waze"
                                     className="flex items-center justify-between w-full bg-linear-to-r from-[#004DB6] to-[#00AEEF] text-white p-4 rounded-xl font-bold text-sm hover:opacity-90 transition-all shadow-lg hover:shadow-[#004DB6]/30 group"
                                 >
-                                    Traçar Rota no Waze/Maps
+                                    Como chegar
                                     <MapPin className="w-5 h-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
                                 </a>
                             </motion.div>

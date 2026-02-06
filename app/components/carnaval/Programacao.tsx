@@ -7,7 +7,7 @@ export default function Programacao() {
     const schedule = [
         {
             day: "14",
-            weekday: "SEX",
+            weekday: "SAB",
             month: "FEV",
             blocks: [
                 { time: "10:00", text: "Trilha guiada / Lounge" },
@@ -18,7 +18,7 @@ export default function Programacao() {
         },
         {
             day: "15",
-            weekday: "SÁB",
+            weekday: "DOM",
             month: "FEV",
             blocks: [
                 { time: "10:00", text: "Lounge de descanso" },
@@ -29,7 +29,7 @@ export default function Programacao() {
         },
         {
             day: "16",
-            weekday: "DOM",
+            weekday: "SEG",
             month: "FEV",
             blocks: [
                 { time: "10:00", text: "Lounge e Atividades" },
@@ -40,7 +40,7 @@ export default function Programacao() {
         },
         {
             day: "17",
-            weekday: "SEG",
+            weekday: "TER",
             month: "FEV",
             blocks: [
                 { time: "10:00", text: "Feira de Mulheres" },
@@ -51,7 +51,7 @@ export default function Programacao() {
         },
         {
             day: "18",
-            weekday: "TER",
+            weekday: "QUAR",
             month: "FEV",
             blocks: [
                 { time: "10:00", text: "Lounge / Feira" },
