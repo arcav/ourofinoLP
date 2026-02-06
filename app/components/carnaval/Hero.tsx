@@ -34,7 +34,7 @@ export default function Hero() {
                     {/* Desktop Image - Natural Height */}
                     <div className="relative w-full hidden md:flex">
                         <Image
-                            src="/carnaval/VerãoOuroFino_2026_v9.webp"
+                            src="/carnaval/hero.png"
                             alt="Verão Ouro Fino Carnaval Desktop"
                             width={1920}
                             height={1080}
