@@ -62,7 +62,11 @@ export default function Programacao() {
     ];
 
     return (
-        <section className="py-8 px-4 bg-gray-50 relative" id="programacao">
+        <section
+            aria-label="Programação do Carnaval"
+            className="py-8 px-4 bg-gray-50 relative"
+            id="programacao"
+        >
             <div className="container mx-auto max-w-4xl">
                 <div className="text-center mb-10">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#004DB6] uppercase tracking-tight leading-none px-2">
@@ -70,7 +74,10 @@ export default function Programacao() {
                     </h2>
                 </div>
 
-                <div className="flex flex-col gap-8 pb-16 px-2 md:px-0">
+                <div
+                    role="list"
+                    className="flex flex-col gap-8 pb-16 px-2 md:px-0"
+                >
                     {schedule.map((day, i) => (
                         <Card
                             key={i}
@@ -87,7 +94,8 @@ export default function Programacao() {
 
 function Card({ day, index, total }: any) {
     return (
-        <div
+        <article
+            role="listitem"
             className="sticky group/card"
             style={{
                 top: `calc(100px + ${index * 15}px)`,
@@ -112,8 +120,8 @@ function Card({ day, index, total }: any) {
                 >
 
                     {/* TICKET NOTCHES (Only desktop to save space on mobile) */}
-                    <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-gray-50 rounded-full z-20"></div>
-                    <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-gray-50 rounded-full z-20"></div>
+                    <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-gray-50 rounded-full z-20" aria-hidden="true"></div>
+                    <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-gray-50 rounded-full z-20" aria-hidden="true"></div>
 
                     {/* DATE SECTION - Mobile: Top Banner, Desktop: Left Side */}
                     <div className="bg-[#003d91] w-full md:w-48 flex flex-row md:flex-col justify-between md:justify-center items-center p-6 md:p-6 border-b md:border-b-0 md:border-r-2 border-dashed border-white/20 shrink-0 relative">
@@ -125,14 +133,14 @@ function Card({ day, index, total }: any) {
                             <span className="text-sm md:text-lg font-bold uppercase tracking-[0.2em] text-[#00AEEF] mt-0 md:mt-2 relative z-10">{day.month}</span>
                         </div>
                         {/* Mobile date badge */}
-                        <div className="md:hidden bg-[#00AEEF] px-4 py-2 rounded-full relative z-10">
+                        <div className="md:hidden bg-[#00AEEF] px-4 py-2 rounded-full relative z-10" aria-hidden="true">
                             <span className="text-xs font-black uppercase tracking-wider text-white">
                                 {day.day} {day.weekday} {day.month}
                             </span>
                         </div>
 
                         {/* Texture */}
-                        <div className="absolute inset-0 bg-white/5 opacity-50"></div>
+                        <div className="absolute inset-0 bg-white/5 opacity-50" aria-hidden="true"></div>
                     </div>
 
                     {/* CONTENT SECTION */}
@@ -152,13 +160,13 @@ function Card({ day, index, total }: any) {
                         {day.kids.length > 0 && (
                             <div className="w-full lg:w-56 bg-white/10 rounded-xl md:rounded-2xl p-4 md:p-5 shrink-0 flex flex-col justify-center border border-white/10 h-auto self-stretch backdrop-blur-sm mt-2 md:mt-0">
                                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                                    <Star className="w-3 h-3 md:w-4 md:h-4 text-yellow-400 fill-yellow-400" />
+                                    <Star className="w-3 h-3 md:w-4 md:h-4 text-yellow-400 fill-yellow-400" aria-hidden="true" />
                                     <span className="text-[10px] md:text-xs font-black uppercase text-yellow-400 tracking-widest">Espaço Kids</span>
                                 </div>
                                 <div className="grid grid-cols-1 gap-1">
                                     {day.kids.map((k: string, kx: number) => (
                                         <p key={kx} className="text-xs md:text-sm text-white/90 font-medium flex items-center gap-2">
-                                            <span className="w-1 h-1 bg-yellow-400 rounded-full shrink-0"></span>
+                                            <span className="w-1 h-1 bg-yellow-400 rounded-full shrink-0" aria-hidden="true"></span>
                                             {k}
                                         </p>
                                     ))}
@@ -167,10 +175,10 @@ function Card({ day, index, total }: any) {
                         )}
 
                         {/* Spacing filler for desktop alignment */}
-                        {day.kids.length === 0 && <div className="hidden lg:block w-56 shrink-0"></div>}
+                        {day.kids.length === 0 && <div className="hidden lg:block w-56 shrink-0" aria-hidden="true"></div>}
                     </div>
                 </div>
             </motion.div>
-        </div>
+        </article>
     );
 }

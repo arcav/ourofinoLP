@@ -62,7 +62,10 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={`fixed left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'top-0' : 'top-0'}`}>
+            <nav
+                aria-label="Menu principal"
+                className={`fixed left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'top-0' : 'top-0'}`}
+            >
                 <div className={`
                     flex items-center justify-between gap-4 md:gap-8 
                     bg-white/90 backdrop-blur-2xl 
@@ -98,6 +101,7 @@ export default function Navbar() {
                                     key={link.label}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.href)}
+                                    aria-current={isActive ? "page" : undefined}
                                     className={`
                                         transition-all duration-300 uppercase relative
                                         ${isActive ? 'text-[#009FE3] scale-105' : 'hover:text-[#004DB6] hover:scale-105'}
@@ -120,8 +124,10 @@ export default function Navbar() {
                     <button
                         className="md:hidden p-2 text-[#009FE3]"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+                        aria-expanded={isMobileMenuOpen}
                     >
-                        {isMobileMenuOpen ? <X /> : <Menu />}
+                        {isMobileMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
                     </button>
                 </div>
             </nav>
@@ -143,6 +149,7 @@ export default function Navbar() {
                                     key={link.label}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.href)}
+                                    aria-current={isActive ? "page" : undefined}
                                     className={`
                                         text-2xl font-black uppercase tracking-tight transition-colors
                                         ${isActive ? 'text-[#009FE3]' : 'text-gray-800'}

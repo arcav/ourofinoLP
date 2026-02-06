@@ -47,10 +47,11 @@ export default function Hero() {
                 <div className="absolute -bottom-8 md:-bottom-12 left-0 w-full flex justify-center z-30 px-4">
                     <a
                         href="#ingressos"
+                        aria-label="Garanta seu ingresso para o Carnaval Ouro Fino 2026"
                         className="w-auto bg-[#004DB6] text-white text-base md:text-xl font-bold py-3 px-6 md:py-4 md:px-10 rounded-full hover:bg-blue-800 transition-all shadow-[0_10px_40px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_50px_rgba(0,77,182,0.7)] hover:-translate-y-2 transform flex items-center justify-center gap-2 md:gap-3 uppercase tracking-wide group animate-fade-in-up cursor-pointer border-[3px] md:border-4 border-white backdrop-blur-md"
                     >
                         Garanta seu Ingresso
-                        <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                 </div>
             </div>

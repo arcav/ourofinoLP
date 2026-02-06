@@ -17,7 +17,7 @@ export default function MapSection() {
 
                     <div className="relative w-full h-[600px] md:h-[500px] flex items-center justify-center">
                         {/* Abstract Background Decoration */}
-                        <div className="absolute inset-0 bg-white rounded-4xl md:rounded-[3rem] -rotate-1 scale-95 opacity-50 shadow-md"></div>
+                        <div className="absolute inset-0 bg-white rounded-4xl md:rounded-[3rem] -rotate-1 scale-95 opacity-50 shadow-md" aria-hidden="true"></div>
 
                         {/* Map Container with Creative Mask */}
                         <div className="relative w-full h-full rounded-4xl md:rounded-[3rem] overflow-hidden shadow-2xl z-10 group">
@@ -29,6 +29,7 @@ export default function MapSection() {
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
+                                title="Mapa da localização da Estância Hidromineral Ouro Fino"
                                 className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out md:grayscale"
                             ></iframe>
 
@@ -84,10 +85,12 @@ export default function MapSection() {
                                 <a
                                     href="https://maps.app.goo.gl/gu7g7"
                                     target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Traçar rota no Google Maps e Waze"
                                     className="flex items-center justify-between w-full bg-linear-to-r from-[#004DB6] to-[#00AEEF] text-white p-4 rounded-xl font-bold text-sm hover:opacity-90 transition-all shadow-lg hover:shadow-[#004DB6]/30 group"
                                 >
                                     Traçar Rota no Waze/Maps
-                                    <MapPin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                                    <MapPin className="w-5 h-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
                                 </a>
                             </motion.div>
                         </div>

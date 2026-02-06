@@ -34,7 +34,7 @@ export default function Ingressos() {
                                 className="relative z-10 order-1 md:order-1 w-full"
                             >
                                 <div className="bg-[#004DB6] p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-4xl shadow-2xl relative overflow-hidden group hover:shadow-[#004DB6]/30 transition-all duration-300 w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] mx-auto md:mx-0 rotate-1 md:rotate-2 hover:rotate-0 hover:z-30">
-                                    <div className="hidden md:block absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-white/5 rounded-br-[100%] transition-transform group-hover:scale-110"></div>
+                                    <div className="hidden md:block absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-white/5 rounded-br-[100%] transition-transform group-hover:scale-110" aria-hidden="true"></div>
 
                                     <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-1 relative z-10 gap-0 sm:gap-0">
                                         <h3 className="text-lg sm:text-2xl font-black text-white uppercase tracking-wide text-center">Inteira</h3>
@@ -55,7 +55,7 @@ export default function Ingressos() {
                                             "Estacionamento gratuito (limitado)"
                                         ].map((item, i) => (
                                             <div key={i} className="flex items-start gap-2 text-white/90 font-medium text-xs md:text-base">
-                                                <div className="w-3.5 h-3.5 md:w-5 md:h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
+                                                <div className="w-3.5 h-3.5 md:w-5 md:h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
                                                     <CheckCircle2 className="w-2.5 h-2.5 md:w-3 md:h-3 text-white" />
                                                 </div>
                                                 <span className="leading-tight">{item}</span>
@@ -68,10 +68,11 @@ export default function Ingressos() {
                                         href="https://www.aguasourofino.com.br/ingresso-inteira-estancia-hidromineral"
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label="Comprar ingresso inteira"
                                         className="w-full bg-white text-[#004DB6] hover:bg-yellow-400 font-black py-2.5 md:py-3.5 rounded-lg transition-all text-xs md:text-base flex items-center justify-center gap-2 shadow-lg"
                                     >
                                         Garanta seu Ingresso
-                                        <Ticket className="w-3.5 h-3.5 md:w-5 md:h-5" />
+                                        <Ticket className="w-3.5 h-3.5 md:w-5 md:h-5" aria-hidden="true" />
                                     </a>
                                 </div>
                             </motion.div>
@@ -90,7 +91,7 @@ export default function Ingressos() {
                                     <div className="hidden md:block absolute inset-0 bg-[#004DB6] blur-[80px] opacity-30 rounded-full animate-pulse"></div>
                                     <Image
                                         src="/carnaval/INGRESSO-INTEIRA.png"
-                                        alt="Ingresso Inteira"
+                                        alt="Ingresso Inteira - R$ 60,00"
                                         fill
                                         className="object-contain relative z-10"
                                         sizes="(max-width: 768px) 90vw, 50vw"
@@ -120,7 +121,7 @@ export default function Ingressos() {
                                     <div className="hidden md:block absolute inset-0 bg-[#00AEEF] blur-[80px] opacity-20 rounded-full animate-pulse"></div>
                                     <Image
                                         src="/carnaval/INGRESSO-MEIA.png"
-                                        alt="Ingresso Meia"
+                                        alt="Ingresso Meia Entrada - R$ 30,00"
                                         fill
                                         className="object-contain relative z-10"
                                         sizes="(max-width: 768px) 90vw, 50vw"
@@ -138,7 +139,7 @@ export default function Ingressos() {
                                 className="relative z-10 order-1 md:order-2 w-full"
                             >
                                 <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-4xl shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all duration-300 w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] mx-auto md:mx-0 -rotate-1 md:-rotate-2 hover:rotate-0 hover:z-30">
-                                    <div className="hidden md:block absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-[#00AEEF]/5 rounded-bl-[100%] transition-transform group-hover:scale-110"></div>
+                                    <div className="hidden md:block absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-[#00AEEF]/5 rounded-bl-[100%] transition-transform group-hover:scale-110" aria-hidden="true"></div>
 
                                     <h3 className="text-lg sm:text-2xl font-black text-[#004DB6] uppercase tracking-wide mb-1 relative z-10 text-center md:text-left">Meia Entrada</h3>
                                     <p className="text-gray-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs md:text-sm mb-3 md:mb-5 relative z-10 text-center md:text-left">Estudantes • Idosos • PNE</p>
@@ -157,7 +158,7 @@ export default function Ingressos() {
                                             "Apresentação de documento necessária"
                                         ].map((item, i) => (
                                             <div key={i} className="flex items-start gap-2 text-gray-600 font-medium text-xs md:text-base">
-                                                <CheckCircle2 className="w-3.5 h-3.5 md:w-5 md:h-5 text-[#00AEEF] shrink-0 mt-0.5" />
+                                                <CheckCircle2 className="w-3.5 h-3.5 md:w-5 md:h-5 text-[#00AEEF] shrink-0 mt-0.5" aria-hidden="true" />
                                                 <span className="leading-tight">{item}</span>
                                             </div>
                                         ))}
@@ -168,10 +169,11 @@ export default function Ingressos() {
                                         href="https://www.aguasourofino.com.br/ingresso-meia-estancia-hidromineral"
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label="Comprar ingresso meia entrada"
                                         className="w-full bg-[#f0f2f5] hover:bg-[#00AEEF] text-[#004DB6] hover:text-white font-black py-2 md:py-3.5 rounded-lg transition-all text-xs md:text-base flex items-center justify-center gap-2 group-hover:shadow-lg"
                                     >
                                         Garanta seu Ingresso
-                                        <Ticket className="w-3.5 h-3.5 md:w-5 md:h-5" />
+                                        <Ticket className="w-3.5 h-3.5 md:w-5 md:h-5" aria-hidden="true" />
                                     </a>
                                 </div>
                             </motion.div>
@@ -179,7 +181,7 @@ export default function Ingressos() {
                         </div>
 
                         {/* Connector Line (Decorative) */}
-                        <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-t-4 border-r-4 border-dashed border-[#004DB6]/10 rounded-tr-[3rem]"></div>
+                        <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-t-4 border-r-4 border-dashed border-[#004DB6]/10 rounded-tr-[3rem]" aria-hidden="true"></div>
                     </div>
 
                 </div>
