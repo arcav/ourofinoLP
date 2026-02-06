@@ -53,6 +53,23 @@ Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 - `npm run build`: Cria a versão otimizada para produção.
 - `npm run start`: Inicia o servidor de produção com o build gerado.
 - `npm run lint`: Executa a verificação de código com ESLint.
+- `npm run build`: Gera o build standalone otimizado para Docker.
+
+## 🐳 Docker
+
+Este projeto está configurado para builds otimizados usando a funcionalidade `standalone` do Next.js.
+
+### Build da Imagem
+```bash
+docker build -t oprofino-lp .
+```
+
+### Executando o Container
+```bash
+docker run -p 3000:3000 oprofino-lp
+```
+
+O container estará disponível em [http://localhost:3000](http://localhost:3000).
 
 ---
 
