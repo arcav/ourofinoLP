@@ -166,7 +166,7 @@ export default function Ingressos() {
 
 
                                     <a
-                                        href="https://www.aguasourofino.com.br/ingresso-meia-estancia-hidromineral"
+                                        href="https://www.aguasourofino.com.br/index.php?spsr=product/category&path=551"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label="Comprar ingresso meia entrada"
