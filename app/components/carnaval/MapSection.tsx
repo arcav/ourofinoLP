@@ -45,14 +45,14 @@ export default function MapSection() {
                         <div className="relative w-full h-full rounded-4xl md:rounded-[3rem] overflow-hidden shadow-2xl z-10 group">
                             {isLoaded ? (
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.2291589766955!2d-49.53205392359556!3d-25.429486677564035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce41197775957%3A0x6a8799c90539665e!2sEst%C3%A2ncia%20Hidromineral%20Ouro%20Fino!5e0!3m2!1spt-BR!2sbr!4v1707168000000!5m2!1spt-BR!2sbr"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29536.219546993354!2d-46.37240585!3d-22.27695025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c97752a75a5e41%3A0xc0a851a02fbeb3f5!2sOuro%20Fino%2C%20MG%2C%202037570-000!5e0!3m2!1spt-BR!2sbr!4v1770392804896!5m2!1spt-BR!2sbr"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
-                                    title="Mapa da localização da Estância Hidromineral Ouro Fino"
+                                    title="Mapa da localização de Ouro Fino, MG"
                                     className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out md:grayscale"
                                 ></iframe>
                             ) : (
@@ -81,7 +81,7 @@ export default function MapSection() {
                                     <div>
                                         <p className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider mb-1 md:mb-2">Localização</p>
                                         <h3 className="text-xl md:text-2xl font-black text-[#004DB6] leading-none">
-                                            Estância Hidromineral<br />Ouro Fino
+                                            Ouro Fino, MG
                                         </h3>
                                     </div>
                                     <div className="bg-white/50 p-2 rounded-full shadow-sm">
@@ -97,21 +97,21 @@ export default function MapSection() {
                                     <div>
                                         <p className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wide">Endereço</p>
                                         <p className="text-sm md:text-base text-gray-700 font-medium leading-relaxed">
-                                            Estrada de Ouro Fino, s/n<br />Bateias, Campo Largo - PR
+                                            Centro, Ouro Fino - MG<br />CEP: 37570-000
                                         </p>
                                     </div>
 
                                     <div>
-                                        <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Horário de Funcionamento</p>
+                                        <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Carnaval 2026</p>
                                         <p className="text-gray-700 font-medium flex items-center gap-2">
                                             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                            Terça a Domingo: 07h às 18h
+                                            Ouro Folia: Fevereiro 2026
                                         </p>
                                     </div>
                                 </div>
 
                                 <a
-                                    href="https://maps.app.goo.gl/gu7g7"
+                                    href="https://www.google.com/maps/place/Ouro+Fino,+MG,+37570-000/data=!4m2!3m1!1s0x94c97752a75a5e41:0xc0a851a02fbeb3f5"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label="Traçar rota no Google Maps e Waze"
