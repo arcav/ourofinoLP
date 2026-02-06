@@ -5,11 +5,5 @@ node_modules
 *.md
 Dockerfile
 .dockerignore
-package-lock.json
 npm-debug.log
-README.md
 .eslintrc.json
-eslint.config.mjs
-postcss.config.mjs
-tailwind.config.ts
-tsconfig.json
