@@ -1,10 +1,16 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/app/components/carnaval/Navbar";
 import Hero from "@/app/components/carnaval/Hero";
 import Programacao from "@/app/components/carnaval/Programacao";
 import Ingressos from "@/app/components/carnaval/Ingressos";
-import InfoSection from "@/app/components/carnaval/InfoSection";
-import MapSection from "@/app/components/carnaval/MapSection";
-import Footer from "@/app/components/carnaval/Footer";
+
+const InfoSection = dynamic(() => import("@/app/components/carnaval/InfoSection"), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse" />,
+});
+const MapSection = dynamic(() => import("@/app/components/carnaval/MapSection"), {
+  loading: () => <div className="h-[500px] bg-[#f0f2f5] animate-pulse" />,
+});
+const Footer = dynamic(() => import("@/app/components/carnaval/Footer"));
 
 import type { Metadata } from "next";
 

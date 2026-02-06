@@ -94,8 +94,8 @@ export default function Ingressos() {
                                         alt="Ingresso Inteira - R$ 60,00"
                                         fill
                                         className="object-contain relative z-10"
-                                        sizes="(max-width: 768px) 90vw, 50vw"
-                                        priority
+                                        sizes="(max-width: 768px) 63vw, 500px"
+                                        loading="lazy"
                                     />
 
                                 </div>
@@ -124,8 +124,8 @@ export default function Ingressos() {
                                         alt="Ingresso Meia Entrada - R$ 30,00"
                                         fill
                                         className="object-contain relative z-10"
-                                        sizes="(max-width: 768px) 90vw, 50vw"
-                                        priority
+                                        sizes="(max-width: 768px) 63vw, 500px"
+                                        loading="lazy"
                                     />
                                 </div>
                             </motion.div>

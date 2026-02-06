@@ -18,9 +18,9 @@ export default function Hero() {
                         <Image
                             src="/carnaval/Hero-mobile.png"
                             alt="Verão Ouro Fino Carnaval Mobile"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
+                            width={1200}
+                            height={800}
+                            sizes="(max-width: 768px) 100vw, 400px"
                             className="w-full h-auto"
                             priority
                         />
@@ -31,9 +31,9 @@ export default function Hero() {
                         <Image
                             src="/carnaval/VerãoOuroFino_2026_v9.webp"
                             alt="Verão Ouro Fino Carnaval Desktop"
-                            width={0}
-                            height={0}
-                            sizes="100vw"
+                            width={1920}
+                            height={1080}
+                            sizes="(min-width: 768px) 95vw, 1100px"
                             className="w-full h-auto"
                             priority
                         />
