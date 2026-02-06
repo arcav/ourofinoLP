@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function Ingressos() {
     return (
-        <section className="py-16 px-4 bg-[#f0f2f5] overflow-hidden" id="ingressos">
+        <section className="py-10 px-4 bg-[#f0f2f5] overflow-hidden" id="ingressos">
             <div className="container mx-auto max-w-6xl">
 
-                <div className="text-center mb-16">
+                <div className="text-center mb-10">
                     <h2 className="text-5xl font-black text-[#004DB6] uppercase mb-4 tracking-tight">
                         Garanta seu <span className="text-[#00AEEF]">Ingresso</span>
                     </h2>
@@ -18,73 +18,78 @@ export default function Ingressos() {
                     </p>
                 </div>
 
-                <div className="flex flex-col gap-16 md:gap-24">
+                <div className="flex flex-col gap-10 md:gap-16">
 
                     {/* TICKET 1: MEIA - Left Layout */}
                     <div className="relative">
-                        <div className="grid md:grid-cols-2 gap-8 items-center">
+                        <div className="flex flex-col md:grid md:grid-cols-2 gap-0 md:gap-0 items-center max-w-5xl mx-auto">
 
-                            {/* Visual Side (Image) */}
+                            {/* Visual Side (Image) - Mobile: Order 2, Desktop: Order 1 */}
                             <motion.div
-                                initial={{ x: -100, opacity: 0, rotate: -10 }}
-                                whileInView={{ x: 0, opacity: 1, rotate: -5 }}
-                                transition={{ type: "spring", stiffness: 50 }}
-                                className="relative z-10 flex justify-center md:justify-end"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="relative z-20 flex justify-center md:justify-end -mt-8 md:mt-0 md:-mr-24 order-2 md:order-1 w-full"
                             >
-                                <div className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] aspect-square drop-shadow-2xl hover:scale-105 transition-transform duration-500 cursor-pointer">
+                                <div className="relative w-full max-w-[63%] sm:max-w-[280px] md:max-w-[500px] aspect-square">
                                     {/* Glow */}
-                                    <div className="absolute inset-0 bg-[#00AEEF] blur-[80px] opacity-20 rounded-full animate-pulse"></div>
+                                    <div className="hidden md:block absolute inset-0 bg-[#00AEEF] blur-[80px] opacity-20 rounded-full animate-pulse"></div>
                                     <Image
-                                        src="/carnaval/ingresso-03-655x655 2.png"
+                                        src="/carnaval/INGRESSO-MEIA.png"
                                         alt="Ingresso Meia"
                                         fill
                                         className="object-contain relative z-10"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 90vw, 50vw"
+                                        priority
                                     />
-                                    {/* Floating Badge */}
-                                    <div className="absolute top-6 sm:top-10 right-0 z-20 bg-white text-[#004DB6] font-black px-4 sm:px-6 py-1 sm:py-2 rounded-full shadow-xl rotate-12 border-2 sm:border-4 border-[#00AEEF] text-xs sm:text-base">
-                                        50% OFF
-                                    </div>
                                 </div>
                             </motion.div>
 
-                            {/* Info Side (Card) */}
+                            {/* Info Side (Card) - Mobile: Order 1, Desktop: Order 2 */}
                             <motion.div
-                                initial={{ x: 100, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 0.6 }}
-                                className="relative z-0"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="relative z-10 order-1 md:order-2 w-full"
                             >
-                                <div className="bg-white p-6 sm:p-8 md:p-14 rounded-[2rem] md:rounded-[3rem] shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all duration-300">
-                                    <div className="absolute top-0 right-0 w-40 h-40 md:w-64 md:h-64 bg-[#00AEEF]/5 rounded-bl-[100%] transition-transform group-hover:scale-110"></div>
+                                <div className="bg-white p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-4xl shadow-xl border border-gray-100 relative overflow-hidden group hover:shadow-2xl transition-all duration-300 w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] mx-auto md:mx-0 -rotate-1 md:-rotate-2 hover:rotate-0 hover:z-30">
+                                    <div className="hidden md:block absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-[#00AEEF]/5 rounded-bl-[100%] transition-transform group-hover:scale-110"></div>
 
-                                    <h3 className="text-2xl sm:text-3xl font-black text-[#004DB6] uppercase tracking-wide mb-1 md:mb-2 relative z-10 text-center md:text-left">Meia Entrada</h3>
-                                    <p className="text-gray-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs md:text-sm mb-6 md:mb-8 relative z-10 text-center md:text-left">Estudantes • Idosos • PNE</p>
+                                    <h3 className="text-lg sm:text-2xl font-black text-[#004DB6] uppercase tracking-wide mb-1 relative z-10 text-center md:text-left">Meia Entrada</h3>
+                                    <p className="text-gray-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs md:text-sm mb-3 md:mb-5 relative z-10 text-center md:text-left">Estudantes • Idosos • PNE</p>
 
-                                    <div className="flex items-baseline justify-center md:justify-start gap-1 md:gap-2 mb-6 md:mb-8 relative z-10">
-                                        <span className="text-xl md:text-2xl font-bold text-gray-400">R$</span>
-                                        <span className="text-6xl sm:text-7xl font-black text-[#004DB6] tracking-tighter">30</span>
-                                        <span className="text-lg md:text-xl font-bold text-gray-400">,00</span>
+                                    <div className="flex items-baseline justify-center md:justify-start gap-1 mb-3 md:mb-4 relative z-10">
+                                        <span className="text-base md:text-xl font-bold text-gray-400">R$</span>
+                                        <span className="text-4xl sm:text-6xl font-black text-[#004DB6] tracking-tighter">30</span>
+                                        <span className="text-sm md:text-lg font-bold text-gray-400">,00</span>
                                     </div>
 
-                                    <div className="space-y-3 md:space-y-4 mb-8 md:mb-10 relative z-10">
+                                    <div className="hidden md:block space-y-2 md:space-y-3 mb-5 md:mb-8 relative z-10">
                                         {[
                                             "Acesso completo ao parque",
                                             "Programação de shows inclusa",
                                             "Área de descanso e lazer",
                                             "Apresentação de documento necessária"
                                         ].map((item, i) => (
-                                            <div key={i} className="flex items-start gap-3 text-gray-600 font-medium text-sm md:text-base">
-                                                <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-[#00AEEF] shrink-0 mt-0.5" />
+                                            <div key={i} className="flex items-start gap-2 text-gray-600 font-medium text-xs md:text-base">
+                                                <CheckCircle2 className="w-3.5 h-3.5 md:w-5 md:h-5 text-[#00AEEF] shrink-0 mt-0.5" />
                                                 <span className="leading-tight">{item}</span>
                                             </div>
                                         ))}
                                     </div>
 
-                                    <button className="w-full bg-[#f0f2f5] hover:bg-[#00AEEF] text-[#004DB6] hover:text-white font-black py-3 md:py-4 rounded-xl transition-all text-base md:text-lg flex items-center justify-center gap-2 group-hover:shadow-lg">
-                                        Selecionar Ingresso
-                                        <Ticket className="w-4 h-4 md:w-5 md:h-5" />
-                                    </button>
+
+                                    <a
+                                        href="https://www.aguasourofino.com.br/ingresso-meia-estancia-hidromineral"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full bg-[#f0f2f5] hover:bg-[#00AEEF] text-[#004DB6] hover:text-white font-black py-2 md:py-3.5 rounded-lg transition-all text-xs md:text-base flex items-center justify-center gap-2 group-hover:shadow-lg"
+                                    >
+                                        Garanta seu Ingresso
+                                        <Ticket className="w-3.5 h-3.5 md:w-5 md:h-5" />
+                                    </a>
                                 </div>
                             </motion.div>
 
@@ -96,39 +101,39 @@ export default function Ingressos() {
 
                     {/* TICKET 2: INTEIRA - Right Layout */}
                     <div className="relative">
-                        <div className="grid md:grid-cols-2 gap-8 items-center">
+                        <div className="flex flex-col md:grid md:grid-cols-2 gap-0 md:gap-0 items-center max-w-5xl mx-auto">
 
-                            {/* Info Side (Card) */}
+                            {/* Info Side (Card) - Mobile: Order 1, Desktop: Order 1 */}
                             <motion.div
-                                initial={{ x: -100, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                transition={{ duration: 0.6 }}
-                                className="relative z-0 order-2 md:order-1"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="relative z-10 order-1 md:order-1 w-full"
                             >
-                                <div className="bg-[#004DB6] p-6 sm:p-8 md:p-14 rounded-[2rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden group hover:shadow-[#004DB6]/30 transition-all duration-300">
-                                    <div className="absolute top-0 left-0 w-40 h-40 md:w-64 md:h-64 bg-white/5 rounded-br-[100%] transition-transform group-hover:scale-110"></div>
+                                <div className="bg-[#004DB6] p-4 sm:p-6 md:p-8 rounded-2xl md:rounded-4xl shadow-2xl relative overflow-hidden group hover:shadow-[#004DB6]/30 transition-all duration-300 w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] mx-auto md:mx-0 rotate-1 md:rotate-2 hover:rotate-0 hover:z-30">
+                                    <div className="hidden md:block absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-white/5 rounded-br-[100%] transition-transform group-hover:scale-110"></div>
 
-                                    <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-2 relative z-10 gap-2 sm:gap-0">
-                                        <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-wide">Inteira</h3>
-                                        <span className="bg-yellow-400 text-[#004DB6] text-[10px] font-black uppercase px-3 py-1 rounded-full whitespace-nowrap">Mais Vendido</span>
+                                    <div className="flex flex-col sm:flex-row justify-between items-center sm:items-start mb-1 relative z-10 gap-0 sm:gap-0">
+                                        <h3 className="text-lg sm:text-2xl font-black text-white uppercase tracking-wide text-center">Inteira</h3>
                                     </div>
-                                    <p className="text-white/60 font-bold uppercase tracking-widest text-[10px] sm:text-xs md:text-sm mb-6 md:mb-8 relative z-10 text-center sm:text-left">Público Geral</p>
+                                    <p className="text-white/60 font-bold uppercase tracking-widest text-[10px] sm:text-xs md:text-sm mb-3 md:mb-5 relative z-10 text-center sm:text-left">Público Geral</p>
 
-                                    <div className="flex items-baseline justify-center sm:justify-start gap-1 md:gap-2 mb-6 md:mb-8 relative z-10">
-                                        <span className="text-xl md:text-2xl font-bold text-white/60">R$</span>
-                                        <span className="text-6xl sm:text-7xl font-black text-white tracking-tighter">60</span>
-                                        <span className="text-lg md:text-xl font-bold text-white/60">,00</span>
+                                    <div className="flex items-baseline justify-center sm:justify-start gap-1 mb-3 md:mb-4 relative z-10">
+                                        <span className="text-base md:text-xl font-bold text-white/60">R$</span>
+                                        <span className="text-4xl sm:text-6xl font-black text-white tracking-tighter">60</span>
+                                        <span className="text-sm md:text-lg font-bold text-white/60">,00</span>
                                     </div>
 
-                                    <div className="space-y-3 md:space-y-4 mb-8 md:mb-10 relative z-10">
+                                    <div className="hidden md:block space-y-2 md:space-y-3 mb-5 md:mb-8 relative z-10">
                                         {[
                                             "Acesso TOTAL ao parque e atrações",
                                             "Todas as atrações musicais",
                                             "Sem restrição de horários",
                                             "Estacionamento gratuito (limitado)"
                                         ].map((item, i) => (
-                                            <div key={i} className="flex items-start gap-3 text-white/90 font-medium text-sm md:text-base">
-                                                <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
+                                            <div key={i} className="flex items-start gap-2 text-white/90 font-medium text-xs md:text-base">
+                                                <div className="w-3.5 h-3.5 md:w-5 md:h-5 rounded-full bg-white/20 flex items-center justify-center shrink-0 mt-0.5">
                                                     <CheckCircle2 className="w-2.5 h-2.5 md:w-3 md:h-3 text-white" />
                                                 </div>
                                                 <span className="leading-tight">{item}</span>
@@ -136,35 +141,40 @@ export default function Ingressos() {
                                         ))}
                                     </div>
 
-                                    <button className="w-full bg-white text-[#004DB6] hover:bg-yellow-400 font-black py-3 md:py-4 rounded-xl transition-all text-base md:text-lg flex items-center justify-center gap-2 shadow-lg">
-                                        Comprar Agora
-                                        <Ticket className="w-4 h-4 md:w-5 md:h-5" />
-                                    </button>
+
+                                    <a
+                                        href="https://www.aguasourofino.com.br/ingresso-inteira-estancia-hidromineral"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full bg-white text-[#004DB6] hover:bg-yellow-400 font-black py-2.5 md:py-3.5 rounded-lg transition-all text-xs md:text-base flex items-center justify-center gap-2 shadow-lg"
+                                    >
+                                        Garanta seu Ingresso
+                                        <Ticket className="w-3.5 h-3.5 md:w-5 md:h-5" />
+                                    </a>
                                 </div>
                             </motion.div>
 
-                            {/* Visual Side (Image) */}
+
+                            {/* Visual Side (Image) - Mobile: Order 2, Desktop: Order 2 */}
                             <motion.div
-                                initial={{ x: 100, opacity: 0, rotate: 10 }}
-                                whileInView={{ x: 0, opacity: 1, rotate: 5 }}
-                                transition={{ type: "spring", stiffness: 50 }}
-                                className="relative z-10 flex justify-center md:justify-start order-1 md:order-2"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                className="relative z-20 flex justify-center md:justify-start -mt-8 md:mt-0 order-2 md:order-2 md:-ml-24 w-full"
                             >
-                                <div className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[450px] aspect-square drop-shadow-2xl hover:scale-105 transition-transform duration-500 cursor-pointer">
+                                <div className="relative w-full max-w-[63%] sm:max-w-[280px] md:max-w-[500px] aspect-square">
                                     {/* Glow */}
-                                    <div className="absolute inset-0 bg-[#004DB6] blur-[80px] opacity-30 rounded-full animate-pulse"></div>
+                                    <div className="hidden md:block absolute inset-0 bg-[#004DB6] blur-[80px] opacity-30 rounded-full animate-pulse"></div>
                                     <Image
-                                        src="/carnaval/ingresso-03-655x655 1.png"
+                                        src="/carnaval/INGRESSO-INTEIRA.png"
                                         alt="Ingresso Inteira"
                                         fill
                                         className="object-contain relative z-10"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 90vw, 50vw"
+                                        priority
                                     />
-                                    {/* Star Badge */}
-                                    <div className="absolute bottom-16 sm:bottom-20 left-0 z-20 bg-yellow-400 text-[#004DB6] font-black px-3 sm:px-4 py-3 sm:py-4 rounded-full shadow-xl -rotate-12 border-4 border-white flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24">
-                                        <Star className="w-5 h-5 sm:w-6 sm:h-6 mb-1 fill-[#004DB6]" />
-                                        <span className="text-[10px] sm:text-xs leading-none text-center">BEST SELLER</span>
-                                    </div>
+
                                 </div>
                             </motion.div>
 

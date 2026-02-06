@@ -26,11 +26,11 @@ export default function Home() {
       <div id="programacao">
         <Programacao />
       </div>
-      <div id="info">
-        <InfoSection />
-      </div>
       <div id="ingressos">
         <Ingressos />
+      </div>
+      <div id="info">
+        <InfoSection />
       </div>
       <div id="mapa">
         <MapSection />
