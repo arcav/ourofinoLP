@@ -133,7 +133,7 @@ export default function Footer() {
                                     <Facebook className="w-6 h-6 group-hover:scale-110 transition-transform" />
                                 </a>
                                 <a
-                                    href="https://www.instagram.com/aguasourofino/?hl=pt"
+                                    href="https://www.instagram.com/aguasourofino/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-12 h-12 bg-white text-[#C13584] hover:bg-[#C13584] hover:text-white rounded-2xl flex items-center justify-center transition-all shadow-md hover:shadow-xl border border-blue-100 group"

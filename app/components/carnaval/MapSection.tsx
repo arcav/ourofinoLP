@@ -97,7 +97,7 @@ export default function MapSection() {
                                     <div>
                                         <p className="text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-wide">Endereço</p>
                                         <p className="text-sm md:text-base text-gray-700 font-medium leading-relaxed">
-                                            Estrada Ouro Fino<br />Bateias, Campo Largo - PR <br /> CEP: 83648-000
+                                            Estrada Ouro Fino<br />Bateias, Campo Largo - PR <br /> CEP: 83648-000 <br />Telefone: (41) 3648-6039
                                         </p>
                                     </div>
 
