@@ -7,6 +7,11 @@ export default function Hero() {
     return (
         <section className="relative w-full flex justify-center items-start pt-6 pb-4 md:pt-28 md:pb-16 bg-gray-50/50">
 
+            {/* Visually Hidden H1 for SEO */}
+            <h1 className="sr-only">
+                Carnaval Ouro Fino 2026 - O maior carnaval de Minas Gerais na Estância Hidromineral
+            </h1>
+
             {/* Super Hero Card Container - No overflow hidden here so button can pop out */}
             <div className="relative w-[85%] md:w-[95%] max-w-[400px] md:max-w-[1100px] h-auto shadow-2xl border border-white/40 bg-white group transition-transform duration-700 hover:scale-[1.002] rounded-3xl md:rounded-[3rem] mt-6 md:mt-0">
 

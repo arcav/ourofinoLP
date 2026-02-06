@@ -145,7 +145,7 @@ export default function Footer() {
                     </div>
 
                     {/* Footer Bottom */}
-                    <div className="mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                    <div className="mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
                         <p>© 2026 Ouro Fino - Todos os direitos reservados.</p>
                     </div>
                 </div>

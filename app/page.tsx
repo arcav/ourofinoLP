@@ -15,11 +15,15 @@ const Footer = dynamic(() => import("@/app/components/carnaval/Footer"));
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Carnaval Ouro Fino 2026 | Diversão para toda a família",
-  description: "Confira a programação do Carnaval na Estância Hidromineral Ouro Fino. Ingressos, atrações infantis, música e muita natureza. Garanta já o seu!",
+  title: "Carnaval Ouro Fino 2026 | O Maior Carnaval de Minas Gerais",
+  description: "Venha viver a magia do Carnaval 2026 na Estância Hidromineral Ouro Fino en Minas Gerais. Programação completa, shows, atrações infantis e muita natureza. Garanta seu ingresso!",
+  keywords: ["Carnaval Ouro Fino 2026", "Ouro Folia", "Carnaval Minas Gerais", "Família", "Estância Hidromineral", "Ingressos Carnaval"],
+  alternates: {
+    canonical: 'https://ourofino-lp-git-main-arcavs-projects.vercel.app/',
+  },
   openGraph: {
-    title: "Carnaval Ouro Fino 2026",
-    description: "O melhor carnaval para a família em meio à natureza.",
+    title: "Carnaval Ouro Fino 2026 | Diversão para toda a família",
+    description: "O melhor carnaval para a família em meio à natureza de Ouro Fino, MG.",
     images: ["/carnaval/hero-bg.png"],
   },
 };
