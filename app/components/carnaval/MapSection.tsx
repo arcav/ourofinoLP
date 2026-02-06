@@ -81,7 +81,7 @@ export default function MapSection() {
                                     <div>
                                         <p className="text-xs font-bold text-[#00AEEF] uppercase tracking-wider mb-1 md:mb-2">Localização</p>
                                         <h3 className="text-xl md:text-2xl font-black text-[#004DB6] leading-none">
-                                            Estância Hidromineral<br />Ouro Fino
+                                            Estância<br />Ouro Fino
                                         </h3>
                                     </div>
                                     <div className="bg-white/50 p-2 rounded-full shadow-sm">
