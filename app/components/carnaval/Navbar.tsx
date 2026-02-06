@@ -55,7 +55,7 @@ export default function Navbar() {
     const navLinks = [
         { href: "/", label: "Home" },
         { href: "#programacao", label: "Programação" },
-        { href: "#info", label: "Garantiza tu Ingreso" },
+        { href: "#info", label: "Garanta seu Ingresso" },
         { href: "#aviso", label: "Aviso" },
         { href: "#mapa", label: "Mapa" }
     ];

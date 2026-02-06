@@ -1,9 +1,29 @@
-"use client";
-
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
 
 export default function MapSection() {
+    const [isLoaded, setIsLoaded] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsLoaded(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: "200px" } // Start loading 200px before reaching the view
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section className="pt-12 pb-12 px-4 bg-[#f0f2f5]" id="mapa">
             <div className="container mx-auto max-w-5xl">
@@ -15,23 +35,29 @@ export default function MapSection() {
                         </h2>
                     </div>
 
-                    <div className="relative w-full h-[600px] md:h-[500px] flex items-center justify-center">
+                    <div className="relative w-full h-[600px] md:h-[500px] flex items-center justify-center" ref={containerRef}>
                         {/* Abstract Background Decoration */}
                         <div className="absolute inset-0 bg-white rounded-4xl md:rounded-[3rem] -rotate-1 scale-95 opacity-50 shadow-md" aria-hidden="true"></div>
 
                         {/* Map Container with Creative Mask */}
                         <div className="relative w-full h-full rounded-4xl md:rounded-[3rem] overflow-hidden shadow-2xl z-10 group">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.2291589766955!2d-49.53205392359556!3d-25.429486677564035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce41197775957%3A0x6a8799c90539665e!2sEst%C3%A2ncia%20Hidromineral%20Ouro%20Fino!5e0!3m2!1spt-BR!2sbr!4v1707168000000!5m2!1spt-BR!2sbr"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Mapa da localização da Estância Hidromineral Ouro Fino"
-                                className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out md:grayscale"
-                            ></iframe>
+                            {isLoaded ? (
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.2291589766955!2d-49.53205392359556!3d-25.429486677564035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce41197775957%3A0x6a8799c90539665e!2sEst%C3%A2ncia%20Hidromineral%20Ouro%20Fino!5e0!3m2!1spt-BR!2sbr!4v1707168000000!5m2!1spt-BR!2sbr"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Mapa da localização da Estância Hidromineral Ouro Fino"
+                                    className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out md:grayscale"
+                                ></iframe>
+                            ) : (
+                                <div className="w-full h-full bg-[#e5e7eb] animate-pulse flex items-center justify-center">
+                                    <MapPin className="w-12 h-12 text-[#004DB6] opacity-20" />
+                                </div>
+                            )}
 
                             {/* Floating Minimalist Info Card */}
                             <motion.div
